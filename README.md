@@ -1,7 +1,8 @@
 # Comparison of Local Kubernetes Tools: Minikube, kind, and k3d
 
-## Introduction
+---
 
+## Introduction
 When developing and testing Kubernetes workloads locally, three popular tools stand out: **Minikube**, **kind** (Kubernetes in Docker/Podman), and **k3d** (K3s in Docker). Each tool provides a way to run Kubernetes clusters on local machines for development, proof-of-concept (PoC), and CI/CD pipelines, but they differ in architecture, capabilities, and use cases.
 
 ---
@@ -10,10 +11,13 @@ When developing and testing Kubernetes workloads locally, three popular tools st
 Use **Minikube** as the primary choice for its feature-rich environment, wide runtime support, and close match to production Kubernetes setups.  
 Minikube also includes useful built-in addons such as **metrics-server** for resource monitoring and **Kubernetes Dashboard** for cluster management.
 
-[![asciicast](https://asciinema.org/a/OGCesXw6SvOS2RerXdCAVgRKZ.svg)](https://asciinema.org/a/OGCesXw6SvOS2RerXdCAVgRKZ)
+***Demo:***
+
+![Minikube demo](./minikube/demo.gif)
 
 ---
-## Characteristics
+
+## Characteristics comparison table:
 
 | Feature / Tool                     | Minikube                                                           | kind                                                        | k3d                                                            |
 | ---------------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------- | -------------------------------------------------------------- |
