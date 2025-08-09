@@ -19,10 +19,13 @@ kubectl config set-context --current --namespace=argocd
 watch kubectl get all
 
 minikube -p demo service argocd-server -n argocd
+kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 argocd admin initial-password -n argocd
+kubectl -n argocd get secret argocd-initial-admin-secret \
+  -o jsonpath="{.data.password}" | base64 --decode; echo
 
-argocd login 127.0.0.1:46583 --insecure
+argocd login localhost:8080 --insecure
 
 argocd account update-password
 

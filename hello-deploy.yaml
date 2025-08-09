@@ -90,6 +90,8 @@ metadata:
   name: hello-hpa
   namespace: demo
 spec:
+  podSelector:
+    app: hello
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
