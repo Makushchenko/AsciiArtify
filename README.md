@@ -21,5 +21,3 @@ We validate different local Kubernetes environments by deploying a simple applic
 * ArgoCD installed and configured
 * An application deployed from a Git repository via ArgoCD Auto-Sync
 * Documentation outlining the setup and comparison findings
-
-By the end of this week, we will have both a functional GitOps pipeline and a clear understanding of which local Kubernetes tool best suits our development workflow.
