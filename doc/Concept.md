@@ -11,8 +11,7 @@ When developing and testing Kubernetes workloads locally, three popular tools st
 Use **Minikube** as the primary choice for its feature-rich environment, wide runtime support, and close match to production Kubernetes setups.  
 Minikube also includes useful built-in addons such as **metrics-server** for resource monitoring and **Kubernetes Dashboard** for cluster management.
 
-***Demo:***
-
+### Concept minikube Demo
 ![Minikube demo](../minikube/demo.gif)
 
 ---

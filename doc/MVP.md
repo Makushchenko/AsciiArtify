@@ -1,6 +1,6 @@
 ## Auto-Sync ArgoCD with GitHub
 
-### POC ArgoCD Demo
+### MVP ArgoCD Demo
 ![🎥 Watch ArgoCD Demo](../argocd/MVP-ArgoCD-Demo.gif)
 
 To enable automatic deployment from a GitHub repository in ArgoCD:
