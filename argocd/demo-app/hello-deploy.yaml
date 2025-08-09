@@ -6,7 +6,7 @@ metadata:
   labels:
     app: hello
 spec:
-  replicas: 3
+  replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -94,7 +94,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: hello
-  minReplicas: 2
+  minReplicas: 3
   maxReplicas: 5
   metrics:
   - type: Resource
