@@ -4,7 +4,7 @@ This guide provides a quick start for deploying and accessing [ArgoCD](https://a
 
 ---
 
-![🎥 Watch ArgoCD Demo](../argocd/ArgoCD-Demo.gif)
+![🎥 Watch ArgoCD Demo](../argocd/POC-ArgoCD-Demo.gif)
 
 ---
 

@@ -1,0 +1,1 @@
+![🎥 Watch ArgoCD Demo](../argocd/MVP-ArgoCD-Demo.gif)
