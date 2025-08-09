@@ -32,4 +32,7 @@ argocd account update-password
 minikube -p demo dashboard --url
 kubectl delete -n argocd secret argocd-initial-admin-secret
 
+kubectl port-forward svc/hello -n demo 8181:80
+kubectl port-forward svc/demo-app -n demo 8181:80
+
 minikube delete -p demo
