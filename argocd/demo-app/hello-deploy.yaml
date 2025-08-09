@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-app
+  name: hello
   namespace: demo
   labels:
-    app: demo-app
+    app: hello
 spec:
   replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: demo-app
+      app: hello
   template:
     metadata:
       labels:
-        app: demo-app
+        app: hello
     spec:
       # Make the writable volumes group-writable for the container user
       securityContext:
@@ -24,8 +24,8 @@ spec:
         fsGroup: 101
         fsGroupChangePolicy: "OnRootMismatch"
       containers:
-        - name: demo-app
-          image: nginxdemos/demo-app:plain-text
+        - name: hello
+          image: nginxdemos/hello:plain-text
           ports:
             - containerPort: 80
           resources:
@@ -72,14 +72,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: demo-app
+  name: hello
   namespace: demo
   labels:
-    app: demo-app
+    app: hello
 spec:
   type: ClusterIP
   selector:
-    app: demo-app
+    app: hello
   ports:
     - port: 80
       targetPort: 80
@@ -87,12 +87,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: demo-app-deny-all-except-same-ns
+  name: hello-deny-all-except-same-ns
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: demo-app
+      app: hello
   policyTypes: ["Ingress","Egress"]
   ingress:
   - from:
