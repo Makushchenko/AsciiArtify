@@ -2,11 +2,10 @@
 
 This guide provides a quick start for deploying and accessing [ArgoCD](https://argo-cd.readthedocs.io/en/stable/) on a preinstalled Minikube cluster.
 
----
 
-![🎥 Watch ArgoCD Demo](../argocd/POC-ArgoCD-Demo.gif)
+### POC ArgoCD Demo
+![🎥 Watch POC ArgoCD Demo](../argocd/POC-ArgoCD-Demo.gif)
 
----
 
 ### 1. Install ArgoCD
 
