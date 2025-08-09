@@ -1,6 +1,6 @@
 ## Kubernetes Local Tools & ArgoCD Deployment
 
-This week focuses on understanding, selecting, and comparing **Kubernetes local development tools** alongside implementing **ArgoCD** for GitOps-based application deployment.
+Focuses on understanding, selecting, and comparing **Kubernetes local development tools** alongside implementing **ArgoCD** for GitOps-based application deployment.
 
 ### Concept
 
@@ -8,7 +8,7 @@ The goal is to explore local Kubernetes solutions (e.g., Minikube, Kind, K3d) fo
 
 ### Proof of Concept (PoC)
 
-We validate different local Kubernetes environments by deploying a simple application and evaluating factors such as:
+Validate different local Kubernetes environments by deploying a simple application and evaluating factors such as:
 
 * Ease of setup
 * Resource usage
