@@ -1,17 +1,27 @@
+minikube start -p demo --driver=docker --kubernetes-version=stable --nodes=2 --cpus=2 --memory=4g --disk-size=3g
+
+minikube -p demo addons enable metrics-server
+minikube -p demo addons enable dashboard
+
+minikube -p demo addons list | grep -E 'metrics-server|dashboard|ingress'
+kubectl get nodes -o wide
+
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-minikube -p demo service argocd-server -n argocd
-    http://127.0.0.1:37189
-    http://127.0.0.1:35375
-
 kubectl config set-context --current --namespace=argocd
 
-argocd admin initial-password -n argocd
-L6X7t8jv2T07ni8-
+watch kubectl get all
 
-argocd login 127.0.0.1:37189 --insecure
+minikube -p demo service argocd-server -n argocd
+
+argocd admin initial-password -n argocd
+
+argocd login 127.0.0.1:46585 --insecure
 
 argocd account update-password
 
+minikube -p demo dashboard --url
 kubectl delete -n argocd secret argocd-initial-admin-secret
+
+minikube delete -p demo
